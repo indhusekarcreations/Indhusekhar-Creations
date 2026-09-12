@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Saree Collection - Indhusekhar Creations</title>
+    <title>Sarees | Indhusekhar Creations</title>
 
     <style>
         * {
@@ -16,155 +15,169 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #fffaf7;
+            background: #fff8f5;
             color: #333;
         }
 
+        /* HEADER */
         header {
-            background-color: white;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #8b3a62;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-
-        nav a:hover {
-            color: #8b3a62;
-        }
-
-        .page-title {
+            background: #8b1e3f;
+            color: white;
+            padding: 18px 30px;
             text-align: center;
-            padding: 50px 20px 30px;
         }
 
-        .page-title h1 {
-            font-size: 42px;
-            color: #8b3a62;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
         }
 
-        .page-title p {
-            color: #666;
-            font-size: 17px;
+        header p {
+            font-size: 15px;
         }
 
-        .products {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* BACK BUTTON */
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 5px;
+            text-decoration: none;
+            color: #8b1e3f;
+            font-weight: bold;
+        }
+
+        /* PAGE TITLE */
+        .title {
+            text-align: center;
             padding: 20px;
+        }
+
+        .title h2 {
+            color: #8b1e3f;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .title p {
+            color: #666;
+        }
+
+        /* PRODUCTS */
+        .products {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 50px;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
         }
 
-        .product-card {
-            background-color: white;
-            border-radius: 12px;
+        .product {
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
+        .product:hover {
+            transform: translateY(-6px);
         }
 
-        .product-card img {
+        /* IMAGE GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            background: #eee;
+        }
+
+        .gallery img {
             width: 100%;
-            height: 350px;
+            height: 210px;
             object-fit: cover;
             display: block;
+            background: #f2f2f2;
         }
 
-        .product-info {
+        .gallery img:first-child {
+            grid-column: span 2;
+            height: 300px;
+        }
+
+        /* PRODUCT DETAILS */
+        .details {
             padding: 18px;
-            text-align: center;
         }
 
-        .product-info h2 {
-            color: #8b3a62;
+        .details h3 {
+            color: #8b1e3f;
             font-size: 21px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
         .price {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
+            color: #222;
             margin-bottom: 15px;
         }
 
-        .view-button {
+        /* INSTAGRAM BUTTON */
+        .order-btn {
             display: block;
-            text-decoration: none;
-            background-color: #8b3a62;
-            color: white;
-            padding: 12px;
-            border-radius: 6px;
-        }
-
-        .view-button:hover {
-            background-color: #6f2d4e;
-        }
-
-        .back-home {
             text-align: center;
-            margin: 40px 0;
-        }
-
-        .back-home a {
-            color: #8b3a62;
+            background: #8b1e3f;
+            color: white;
             text-decoration: none;
-            font-size: 17px;
+            padding: 13px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
 
+        .order-btn:hover {
+            background: #64132d;
+        }
+
+        /* FOOTER */
         footer {
-            background-color: #8b3a62;
+            background: #8b1e3f;
             color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 25px;
+            margin-top: 30px;
         }
 
-        @media (max-width: 1000px) {
-            .products {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        footer p {
+            margin: 6px;
         }
 
+        /* MOBILE */
         @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
+
+            header h1 {
+                font-size: 24px;
             }
 
             .products {
+                width: 94%;
                 grid-template-columns: 1fr;
             }
 
-            .page-title h1 {
-                font-size: 32px;
+            .gallery img {
+                height: 170px;
             }
 
-            .product-card img {
-                height: 400px;
+            .gallery img:first-child {
+                height: 260px;
             }
         }
     </style>
@@ -172,284 +185,368 @@
 
 <body>
 
-<header>
+    <!-- HEADER -->
+    <header>
+        <h1>Indhusekhar Creations</h1>
+        <p>Beautiful Sarees for Every Occasion</p>
+    </header>
 
-    <div class="logo">
-        Indhusekhar Creations
-    </div>
+    <!-- BACK TO HOME -->
+    <a href="index.html" class="back">← Back to Home</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-    </nav>
+    <!-- TITLE -->
+    <section class="title">
+        <h2>Our Saree Collection</h2>
+        <p>Explore our latest saree collections</p>
+    </section>
 
-</header>
+    <!-- PRODUCTS -->
+    <section class="products">
 
+        <!-- ================= PRODUCT 1 ================= -->
 
-<section class="page-title">
+        <div class="product">
 
-    <h1>Saree Collection</h1>
+            <div class="gallery">
 
-    <p>
-        Discover elegant sarees for every occasion.
-    </p>
+                <img src="IMG_20260908_214841.png.jpg"
+                     alt="Saree Collection 1">
 
-</section>
+                <img src="IMG_20260908_215115.png.jpg"
+                     alt="Saree Collection 1">
 
+                <img src="IMG_20260908_215345.png.jpg"
+                     alt="Saree Collection 1">
 
-<section class="products">
+                <img src="IMG_20260908_215945.png.jpg"
+                     alt="Saree Collection 1">
 
-
-    <!-- Saree 1 -->
-
-    <div class="product-card">
-
-        <img
-            src="images/IMG_20260908_214841.png"
-            alt="Saree 1"
-        >
-
-        <div class="product-info">
-
-            <h2>Saree 1</h2>
-
-            <div class="price">
-                ₹599
             </div>
 
-            <a
-                href="product.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 1</h3>
+
+                <p class="description">
+                    Elegant saree collection with a beautiful design,
+                    perfect for special occasions and everyday elegance.
+                </p>
+
+                <div class="price">₹599</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 2 ================= -->
 
-    <!-- Saree 2 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260908_215945.png"
-            alt="Saree 2"
-        >
+                <img src="IMG_20260908_215945.png.jpg"
+                     alt="Saree Collection 2">
 
-        <div class="product-info">
+                <img src="IMG_20260908_220426.png.jpg"
+                     alt="Saree Collection 2">
 
-            <h2>Saree 2</h2>
+                <img src="IMG_20260908_220704.png.jpg"
+                     alt="Saree Collection 2">
 
-            <div class="price">
-                ₹499
+                <img src="IMG_20260908_220723.png.jpg"
+                     alt="Saree Collection 2">
+
             </div>
 
-            <a
-                href="product2.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 2</h3>
+
+                <p class="description">
+                    Stylish and graceful saree designed to add elegance
+                    to your traditional look.
+                </p>
+
+                <div class="price">₹499</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 3 ================= -->
 
-    <!-- Saree 3 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_111809.png"
-            alt="Saree 3"
-        >
+                <img src="IMG_20260909_111809.png.jpg"
+                     alt="Saree Collection 3">
 
-        <div class="product-info">
+                <img src="IMG_20260909_111946.png.jpg"
+                     alt="Saree Collection 3">
 
-            <h2>Saree 3</h2>
+                <img src="IMG_20260909_142036.png.jpg"
+                     alt="Saree Collection 3">
 
-            <div class="price">
-                ₹499
+                <img src="IMG_20260909_142128.png.jpg"
+                     alt="Saree Collection 3">
+
             </div>
 
-            <a
-                href="product3.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 3</h3>
+
+                <p class="description">
+                    Beautiful traditional saree with an elegant appearance,
+                    suitable for festive occasions and celebrations.
+                </p>
+
+                <div class="price">₹499</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 4 ================= -->
 
-    <!-- Saree 4 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_142340.png"
-            alt="Saree 4"
-        >
+                <img src="IMG_20260909_142340.png.jpg"
+                     alt="Saree Collection 4">
 
-        <div class="product-info">
+                <img src="IMG_20260909_142443.png.jpg"
+                     alt="Saree Collection 4">
 
-            <h2>Saree 4</h2>
+                <img src="IMG_20260909_144305.png.jpg"
+                     alt="Saree Collection 4">
 
-            <div class="price">
-                ₹499
             </div>
 
-            <a
-                href="product4.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 4</h3>
+
+                <p class="description">
+                    Attractive saree collection with a graceful traditional
+                    look, perfect for various occasions.
+                </p>
+
+                <div class="price">₹499</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 5 ================= -->
 
-    <!-- Saree 5 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_144400.png"
-            alt="Saree 5"
-        >
+                <img src="IMG_20260909_144400.png.jpg"
+                     alt="Saree Collection 5">
 
-        <div class="product-info">
+                <img src="IMG_20260909_144500.png.jpg"
+                     alt="Saree Collection 5">
 
-            <h2>Saree 5</h2>
-
-            <div class="price">
-                ₹499
             </div>
 
-            <a
-                href="product5.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 5</h3>
+
+                <p class="description">
+                    Simple and elegant saree collection for women who love
+                    a beautiful traditional style.
+                </p>
+
+                <div class="price">₹499</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 6 ================= -->
 
-    <!-- Saree 6 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_144808.png"
-            alt="Saree 6"
-        >
+                <img src="IMG_20260909_144808.png.jpg"
+                     alt="Saree Collection 6">
 
-        <div class="product-info">
+                <img src="IMG_20260909_145005.png.jpg"
+                     alt="Saree Collection 6">
 
-            <h2>Saree 6</h2>
+                <img src="1788945448834.png"
+                     alt="Saree Collection 6">
 
-            <div class="price">
-                ₹499
+                <img src="1788945510527.png"
+                     alt="Saree Collection 6">
+
             </div>
 
-            <a
-                href="product6.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 6</h3>
+
+                <p class="description">
+                    Elegant and stylish saree collection designed for
+                    a beautiful traditional and modern look.
+                </p>
+
+                <div class="price">₹499</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 7 ================= -->
 
-    <!-- Saree 7 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_145419.png"
-            alt="Saree 7"
-        >
+                <img src="IMG_20260909_145419.png.jpg"
+                     alt="Saree Collection 7">
 
-        <div class="product-info">
+                <img src="IMG_20260909_145541.png.jpg"
+                     alt="Saree Collection 7">
 
-            <h2>Saree 7</h2>
+                <img src="IMG_20260909_145639.png.jpg"
+                     alt="Saree Collection 7">
 
-            <div class="price">
-                ₹699
             </div>
 
-            <a
-                href="product7.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 7</h3>
+
+                <p class="description">
+                    Premium-looking saree collection with a graceful design,
+                    ideal for festive occasions and celebrations.
+                </p>
+
+                <div class="price">₹699</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- ================= PRODUCT 8 ================= -->
 
-    <!-- Saree 8 -->
+        <div class="product">
 
-    <div class="product-card">
+            <div class="gallery">
 
-        <img
-            src="images/IMG_20260909_183638.png"
-            alt="Saree 8"
-        >
+                <img src="IMG_20260909_183638.png.jpg"
+                     alt="Saree Collection 8">
 
-        <div class="product-info">
+                <img src="IMG_20260909_183734.png.jpg"
+                     alt="Saree Collection 8">
 
-            <h2>Saree 8</h2>
+                <img src="IMG_20260909_183852.png.jpg"
+                     alt="Saree Collection 8">
 
-            <div class="price">
-                ₹849
+                <img src="IMG_20260909_184453.png.jpg"
+                     alt="Saree Collection 8">
+
             </div>
 
-            <a
-                href="product8.html"
-                class="view-button"
-            >
-                View Product
-            </a>
+            <div class="details">
+
+                <h3>Saree Collection 8</h3>
+
+                <p class="description">
+                    Beautiful premium saree collection for an elegant,
+                    stylish and traditional appearance.
+                </p>
+
+                <div class="price">₹849</div>
+
+                <a
+                    href="https://www.instagram.com/indhusekharcreations?stkn=MWt4cm1qa3NsZ29tag=="
+                    target="_blank"
+                    class="order-btn">
+                    Order on Instagram
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<div class="back-home">
+    <!-- FOOTER -->
+    <footer>
 
-    <a href="index.html">
-        ← Back to Home
-    </a>
+        <p><strong>Indhusekhar Creations</strong></p>
 
-</div>
+        <p>Beautiful Sarees, Kurtis & Fashion Collections</p>
 
+        <p>© 2026 Indhusekhar Creations</p>
 
-<footer>
-
-    <p>
-        © 2026 Indhusekhar Creations.
-        All Rights Reserved.
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
