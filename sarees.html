@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saree Collection - Indhusekhar Creations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf7;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b3a62;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #8b3a62;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .page-title h1 {
+            font-size: 42px;
+            color: #8b3a62;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .product-info h2 {
+            color: #8b3a62;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .view-button {
+            display: block;
+            text-decoration: none;
+            background-color: #8b3a62;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .view-button:hover {
+            background-color: #6f2d4e;
+        }
+
+        .back-home {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back-home a {
+            color: #8b3a62;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        footer {
+            background-color: #8b3a62;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 1000px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 32px;
+            }
+
+            .product-card img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Indhusekhar Creations
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+</header>
+
+
+<section class="page-title">
+
+    <h1>Saree Collection</h1>
+
+    <p>
+        Discover elegant sarees for every occasion.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+
+    <!-- Saree 1 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260908_214841.png"
+            alt="Saree 1"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 1</h2>
+
+            <div class="price">
+                ₹599
+            </div>
+
+            <a
+                href="product.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 2 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260908_215945.png"
+            alt="Saree 2"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 2</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <a
+                href="product2.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 3 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_111809.png"
+            alt="Saree 3"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 3</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <a
+                href="product3.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 4 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_142340.png"
+            alt="Saree 4"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 4</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <a
+                href="product4.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 5 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_144400.png"
+            alt="Saree 5"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 5</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <a
+                href="product5.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 6 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_144808.png"
+            alt="Saree 6"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 6</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <a
+                href="product6.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 7 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_145419.png"
+            alt="Saree 7"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 7</h2>
+
+            <div class="price">
+                ₹699
+            </div>
+
+            <a
+                href="product7.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Saree 8 -->
+
+    <div class="product-card">
+
+        <img
+            src="images/IMG_20260909_183638.png"
+            alt="Saree 8"
+        >
+
+        <div class="product-info">
+
+            <h2>Saree 8</h2>
+
+            <div class="price">
+                ₹849
+            </div>
+
+            <a
+                href="product8.html"
+                class="view-button"
+            >
+                View Product
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html">
+        ← Back to Home
+    </a>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 Indhusekhar Creations.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

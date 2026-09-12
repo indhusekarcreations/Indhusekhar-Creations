@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indhusekhar Creations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf7;
+            color: #333;
+        }
+
+        /* Header */
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b3a62;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #8b3a62;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(
+                rgba(255, 250, 247, 0.95),
+                rgba(255, 250, 247, 0.95)
+            );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #8b3a62;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: #8b3a62;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 17px;
+        }
+
+        .hero-button:hover {
+            background-color: #6f2d4e;
+        }
+
+        /* Collections */
+
+        .collections {
+            padding: 70px 7%;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #8b3a62;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .collection-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .collection-card {
+            background-color: #fffaf7;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .collection-card h3 {
+            color: #8b3a62;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .collection-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .collection-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #8b3a62;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .collection-button:hover {
+            background-color: #6f2d4e;
+        }
+
+        /* About */
+
+        .about {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            color: #8b3a62;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* Instagram */
+
+        .instagram {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .instagram h2 {
+            color: #8b3a62;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .instagram p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .instagram-button {
+            display: inline-block;
+            background-color: #8b3a62;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+        }
+
+        .instagram-button:hover {
+            background-color: #6f2d4e;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #8b3a62;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 900px) {
+
+            .collection-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .collection-card img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        Indhusekhar Creations
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+
+        <a href="#collections">
+            Collections
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="https://www.instagram.com/indhusekharcreations/"
+           target="_blank">
+            Instagram
+        </a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Indhusekhar Creations
+        </h1>
+
+        <p>
+            Discover beautiful clothing collections
+            designed to make every occasion special.
+        </p>
+
+        <a
+            href="#collections"
+            class="hero-button"
+        >
+            Explore Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+
+<section
+    class="collections"
+    id="collections"
+>
+
+    <div class="section-title">
+
+        <h2>
+            Our Collections
+        </h2>
+
+        <p>
+            Discover fashion made for every occasion.
+        </p>
+
+    </div>
+
+
+    <div class="collection-grid">
+
+
+        <!-- SAREES -->
+
+        <div class="collection-card">
+
+            <img
+                src="images/IMG_20260908_214841.png"
+                alt="Saree Collection"
+            >
+
+            <h3>
+                Sarees
+            </h3>
+
+            <p>
+                Discover elegant sarees
+                for every occasion.
+            </p>
+
+            <!-- THIS OPENS sarees.html -->
+
+            <a
+                href="sarees.html"
+                class="collection-button"
+            >
+                View Collection
+            </a>
+
+        </div>
+
+
+        <!-- KURTIS -->
+
+        <div class="collection-card">
+
+            <img
+                src="images/IMG_20260908_214841.png"
+                alt="Kurti Collection"
+            >
+
+            <h3>
+                Kurtis
+            </h3>
+
+            <p>
+                Stylish and comfortable kurtis
+                for everyday fashion.
+            </p>
+
+            <a
+                href="#"
+                class="collection-button"
+                onclick="comingSoon(event)"
+            >
+                View Collection
+            </a>
+
+        </div>
+
+
+        <!-- NEW ARRIVALS -->
+
+        <div class="collection-card">
+
+            <img
+                src="images/IMG_20260908_214841.png"
+                alt="New Arrivals"
+            >
+
+            <h3>
+                New Arrivals
+            </h3>
+
+            <p>
+                Explore our latest
+                fashion collections.
+            </p>
+
+            <a
+                href="#"
+                class="collection-button"
+                onclick="comingSoon(event)"
+            >
+                View Collection
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <h2>
+        About Indhusekhar Creations
+    </h2>
+
+    <p>
+        Welcome to Indhusekhar Creations.
+        We bring together beautiful fashion,
+        elegant designs and styles for every occasion.
+        Our goal is to make every customer feel
+        confident and beautiful.
+    </p>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+    <h2>
+        Follow Us on Instagram
+    </h2>
+
+    <p>
+        See our latest collections and updates
+        on Instagram.
+    </p>
+
+    <a
+        href="https://www.instagram.com/indhusekharcreations/"
+        target="_blank"
+        class="instagram-button"
+    >
+        @indhusekharcreations
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Indhusekhar Creations.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    function comingSoon(event) {
+
+        event.preventDefault();
+
+        alert(
+            "This collection will be available soon!"
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>

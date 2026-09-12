@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saree 5 - Indhusekhar Creations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf7;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #8b3a62;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .product-page {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 550px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            overflow-x: auto;
+        }
+
+        .thumbnail {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover {
+            border-color: #8b3a62;
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-details h1 {
+            font-size: 38px;
+            color: #8b3a62;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            color: #666;
+            line-height: 1.7;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .details-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .details-box p {
+            margin-bottom: 10px;
+        }
+
+        .order-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: #8b3a62;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+
+        .order-button:hover {
+            background-color: #6f2d4e;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8b3a62;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #8b3a62;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+            .product-page {
+                grid-template-columns: 1fr;
+            }
+
+            .main-image {
+                height: 450px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Indhusekhar Creations</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#catalogue">Catalogue</a>
+    </nav>
+</header>
+
+
+<section class="product-page">
+
+    <div>
+
+        <img
+            id="mainImage"
+            class="main-image"
+            src="images/IMG_20260909_144400.png"
+            alt="Saree 5"
+        >
+
+        <div class="thumbnail-container">
+
+            <img class="thumbnail"
+                src="images/IMG_20260909_144400.png"
+                onclick="changeImage(this.src)">
+
+            <img class="thumbnail"
+                src="images/IMG_20260909_144500.png"
+                onclick="changeImage(this.src)">
+
+        </div>
+    </div>
+
+
+    <div class="product-details">
+
+        <h1>Saree 5</h1>
+
+        <div class="product-price">₹499</div>
+
+        <p class="product-description">
+            Beautiful saree with elegant detailing,
+            suitable for festive occasions,
+            celebrations and special events.
+        </p>
+
+        <div class="details-box">
+
+            <p><strong>Product:</strong> Saree</p>
+            <p><strong>Price:</strong> ₹499</p>
+            <p><strong>Collection:</strong> Saree Collection</p>
+            <p><strong>Availability:</strong> Available</p>
+
+        </div>
+
+        <a
+            href="https://www.instagram.com/indhusekharcreations/"
+            class="order-button"
+            target="_blank"
+        >
+            Order on Instagram
+        </a>
+
+        <a href="index.html#catalogue" class="back-button">
+            ← Back to Catalogue
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Indhusekhar Creations. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+    function changeImage(imageSource) {
+        document.getElementById("mainImage").src = imageSource;
+    }
+</script>
+
+</body>
+</html>
